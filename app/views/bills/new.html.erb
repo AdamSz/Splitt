@@ -24,6 +24,20 @@
       </div>
 
       <div class="form__part">
+        <h4 class="form__heading">Recipients</h4>
+
+        <%= f.simple_fields_for :recipients do |recipient| %>
+            <%= render 'recipient_fields', f: recipient %>
+        <% end %>
+
+        <div class="form__action">
+          <%= link_to_add_association 'Add new person', f, :recipients, class: 'button' %>
+        </div>
+      </div>
+
+
+
+      <div class="form__part">
         <h4 class="form__heading">Additional Info</h4>
 
         <div class="form__field-wrapper">
