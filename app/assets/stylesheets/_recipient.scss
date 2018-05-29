@@ -85,3 +85,7 @@
 .recipient__details {
   margin-right: auto;
 }
+
+.bill__item + .bill__item {
+  margin-top: 40px;
+}
