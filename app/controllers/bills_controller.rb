@@ -17,6 +17,11 @@ class BillsController < ApplicationController
 		end
 	end
 
+	def home
+		@bill = Bill.last
+
+    end
+
 	def show
 		@bill = Bill.find(params[:id])
 	end
